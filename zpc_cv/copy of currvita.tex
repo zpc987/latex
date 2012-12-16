@@ -1,0 +1,106 @@
+%\documentclass[11pt,a4paper]{moderncv}
+\documentclass{scrartcl}	% classe article di KOMA
+%\documentclass{article}
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+%\usepackage[latin1]{inputenc}	% la codifica di input
+%\usepackage[T1]{fontenc}	% la codifica dei font
+\usepackage{textpos}
+\usepackage{CJK}
+\usepackage{graphicx}
+\usepackage[LabelsAligned]{currvita}	% un buon pacchetto per CV
+%\usepackage[nochapters]{classicthesis} % stile ClassicThesis
+%\usepackage{url}	% per gli indirizzi Internet
+%\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+%\renewcommand{\cvlistheadingfont}{\large}
+%\renewcommand{\cvlabelfont}{\qquad}
+%Setup hyperref package, and colours for links, text and headings
+%\usepackage{hyperref}		
+%\hypersetup{colorlinks,breaklinks,
+%			urlcolor=Maroon,
+%			linkcolor=Maroon}
+%\usepackage{eurosym}
+%\usepackage{ctex}
+\newlength{\datebox}\settowidth{\datebox}{Summer 2007}
+
+\newcommand{\NewWorkExperience}[4]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3 #4%
+\vspace{0.1em}}
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright{#1}\par\normalsize}
+\newcommand{\Sep}{\vspace{3.5em}}
+\begin{document}
+\begin{CJK}{GBK}{yahei}
+\thispagestyle{empty}
+
+%\begin{textblock}{1}(-3,0) %
+%\includegraphics[width=2.5cm]{texlion.jpg}
+%\end{textblock}
+\topmargin = 0.3em
+\begin{cv}%{张鹏程}
+
+\vspace{2em}
+
+\NewWorkExperience{最高学历：}{硕士}{}{}
+
+\NewWorkExperience{出生日期：}{1987}{}{}
+
+%\NewWorkExperience{籍贯：}{安徽}{}{}
+
+%\NewWorkExperience{email}{\href{mailto:zpc987@sina.com}{zpc987@sina.com}}{}{}
+\NewWorkExperience{email}{zpc987@sina.com}{}{}
+
+\NewWorkExperience{phone}{152 1670 4611}{}{}
+\vspace{1.5em}
+
+%\noindent{工作和学习经历}
+\vspace{0.5em}
+
+\NewWorkExperience{2011.7$\sim$now}{中兴通讯$\cdotp$}{验证工程师}{}
+%\vspace{0.5em}
+\Description{\MarginDate{工作经历}
+\vspace{0.5em}
+\newline 从事硬件描述语言（verilog）的代码验证工作，基于RVM的验证方法学，使用
+OpenVera验证语言。业务主要与互联网的数据链路层和传输层的产品相关。}
+
+\Sep
+\NewWorkExperience{2010.7$\sim$2011.7}{上海贝岭股份有限公司$\cdotp$}{实习生}{}
+\Description{\MarginDate{实习经历}
+\vspace{0.5em}
+\newline 使用verilog代码进行数字IC前端设计，负责一款液晶显示驱动芯片中时序控制单元的
+FRC算法模块单元的实现和该单元的测试平台编写。 }
+
+\Sep
+\Description{\MarginDate{工作技能}
+%\NewWorkExperience{熟悉verilog，可以使用vera，sv编写小型的测试代码，可以使用makefile，perl等脚本语言。}{}{}{}
+熟悉verilog语言，可以使用vera，sv语言编写小型的测试代码，可以编写makefile，perl等脚本语言。
+}
+
+
+
+\Sep
+
+
+\Description{\MarginDate{学习经历}
+\NewWorkExperience{2009.9$\sim$2011.7}{复旦大学$\cdotp$}{硕士$\cdotp$}{集成电路工程专业}
+\newline \NewWorkExperience{2005.9$\sim$2009.7}{西北工业大学$\cdotp$}{学士$\cdotp$}{电子科学与技术专业}
+\vspace{0.5em}
+\newline 主要课程：C语言，模拟IC设计，数字IC设计，模拟电路，数字电路，信号系统，DSP，通信原理，微机原理 $\cdots$ }
+
+
+%\Sep
+%
+%\vspace{0.5em}
+%\Description{\MarginDate{业余爱好}
+%操作系统，自由软件，web编程等\\
+%篮球，羽毛球，溜冰等}
+
+%\Sep
+%
+%\Description{\MarginDate{英语水平}
+%CET6}
+
+\Sep
+
+\end{cv}
+\end{CJK}
+\end{document} 
